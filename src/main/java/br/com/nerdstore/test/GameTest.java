@@ -7,12 +7,18 @@ import java.util.Locale;
 public class GameTest {
     public static void main(String[] args) {
         Locale.setDefault(Locale.of("pt", "BR"));
-        Game game = new Game();
+        Game game1 = new Game();
+        Game game2 = new Game();
 
-        game.name = "The Witcher 3";
-        game.genre = "RPG";
-        game.price = 150.00;
+        game1.name = "Zelda";
+        game1.genre = "RPG";
+        game1.price = 99.99;
 
-        System.out.printf("Jogo: %s | Gênero: %s | Preço: %.2f%n", game.name, game.genre, game.price);
+        game2.name = "God of War";
+        game2.genre = "Action";
+        game2.price = 99.99;
+
+        game1.printInfo();
+        game2.printInfo();
     }
 }
