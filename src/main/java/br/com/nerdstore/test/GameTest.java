@@ -13,6 +13,7 @@ public class GameTest {
         game1.name = "Zelda";
         game1.genre = "RPG";
         game1.price = 99.99;
+        game1.reviews = new double[]{9.5, 10.0, 9.0};
 
         game2.name = "God of War";
         game2.genre = "Action";
@@ -20,5 +21,7 @@ public class GameTest {
 
         game1.printInfo();
         game2.printInfo();
+        game1.printMediaReviews();
+        game2.printMediaReviews();
     }
 }
