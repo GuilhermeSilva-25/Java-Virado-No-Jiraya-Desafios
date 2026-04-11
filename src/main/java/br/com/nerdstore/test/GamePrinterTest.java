@@ -11,13 +11,14 @@ public class GamePrinterTest {
         Game game1 = new Game();
         Game game2 = new Game();
 
-        game1.name = "Zelda";
-        game1.genre = "RPG";
-        game1.price = 99.99;
+        game1.setName("Zelda");
+        game1.setGenre("RPG");
+        game1.setPrice(99.99);
+        game1.reviews = new double[]{9.5, 10.0, 9.0};
 
-        game2.name = "God of War";
-        game2.genre = "Action";
-        game2.price = 99.99;
+        game2.setName("God of War");
+        game2.setGenre("Action");
+        game2.setPrice(99.99);
 
         GamePrinter gamePrinter = new GamePrinter();
 
