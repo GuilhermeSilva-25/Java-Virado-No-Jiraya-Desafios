@@ -13,7 +13,7 @@ public class GameTest {
         game1.setName("Zelda");
         game1.setGenre("RPG");
         game1.setPrice(99.99);
-        game1.reviews = new double[]{9.5, 10.0, 9.0};
+        game1.setReviews(new double[]{9.5, 10.0, 9.0});
 
         game2.setName("God of War");
         game2.setGenre("Action");
@@ -26,6 +26,6 @@ public class GameTest {
 
         System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", game1.getName(), game1.getGenre(), game1.getPrice());
         System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", game2.getName(), game2.getGenre(), game2.getPrice());
-
+        System.out.printf("Média de avaliações do jogo %s: %.2f%n", game1.getName(), game1.getAverageReviews());
     }
 }
