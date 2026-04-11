@@ -27,5 +27,6 @@ public class GameTest {
         System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", game1.getName(), game1.getGenre(), game1.getPrice());
         System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", game2.getName(), game2.getGenre(), game2.getPrice());
         System.out.printf("Média de avaliações do jogo %s: %.2f%n", game1.getName(), game1.getAverageReviews());
+        System.out.printf("Média de avaliações do jogo %s: %.2f%n", game1.getName(), game1.getAverage());
     }
 }

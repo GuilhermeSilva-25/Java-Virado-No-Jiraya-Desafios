@@ -5,6 +5,7 @@ public class Game {
     private String genre;
     private double price;
     private double[] reviews;
+    private double average;
 
     public void printInfo() {
         System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", this.name, this.genre, this.price);
@@ -34,36 +35,44 @@ public class Game {
         return sum / this.reviews.length;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getName() {
-        return this.name;
+    public String getGenre() {
+        return genre;
     }
 
     public void setGenre(String genre) {
         this.genre = genre;
     }
 
-    public String getGenre() {
-        return this.genre;
-    }
-
-    public void setPrice(double price) {
-        if (price < 0) {
-            System.out.println("Erro: O preço não pode ser negativo");
-            return;
-        }
-
-        this.price = price;
-    }
-
     public double getPrice() {
         return price;
     }
 
+    public void setPrice(double price) {
+        if (price < 0) {
+            this.price = 0.0;
+            return;
+        }
+        this.price = price;
+    }
+
+    public double[] getReviews() {
+        return reviews;
+    }
+
     public void setReviews(double[] reviews) {
         this.reviews = reviews;
+        this.average = getAverageReviews();
+    }
+
+    public double getAverage() {
+        return average;
     }
 }
