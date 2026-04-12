@@ -7,26 +7,18 @@ import java.util.Locale;
 public class GameTest {
     public static void main(String[] args) {
         Locale.setDefault(Locale.of("pt", "BR"));
-        Game game1 = new Game();
+        Game game1 = new Game("Zelda", "RPG", 99.99);
         Game game2 = new Game();
+        Game game3 = new Game("God Of War", 99.99);
 
-        game1.setName("Zelda");
-        game1.setGenre("RPG");
-        game1.setPrice(99.99);
-        game1.setReviews(new double[]{9.5, 10.0, 9.0});
+        game2.setName("Mario");
+        game2.setGenre("Aventura");
+        game2.setPrice(99.99);
 
-        game2.setName("God of War");
-        game2.setGenre("Action");
-        game2.setPrice(-50.0);
-
-/*        game1.printInfo();
+        game1.printInfo();
         game2.printInfo();
-        game1.printMediaReviews();
+        game3.printInfo();
+/*        game1.printMediaReviews();
         game2.printMediaReviews();*/
-
-        System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", game1.getName(), game1.getGenre(), game1.getPrice());
-        System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", game2.getName(), game2.getGenre(), game2.getPrice());
-        System.out.printf("Média de avaliações do jogo %s: %.2f%n", game1.getName(), game1.getAverageReviews());
-        System.out.printf("Média de avaliações do jogo %s: %.2f%n", game1.getName(), game1.getAverage());
     }
 }

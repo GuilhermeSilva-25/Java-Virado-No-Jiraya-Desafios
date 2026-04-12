@@ -7,6 +7,19 @@ public class Game {
     private double[] reviews;
     private double average;
 
+    public Game() {
+    }
+
+    public Game(String name, double price) {
+        this(name, "Desconhecido", price);
+    }
+
+    public Game(String name, String genre, double price) {
+        this.name = name;
+        this.genre = genre;
+        this.setPrice(price);
+    }
+
     public void printInfo() {
         System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", this.name, this.genre, this.price);
     }
@@ -67,10 +80,10 @@ public class Game {
         return reviews;
     }
 
-    public void setReviews(double[] reviews) {
+/*    public void setReviews(double[] reviews) {
         this.reviews = reviews;
         this.average = getAverageReviews();
-    }
+    }*/
 
     public double getAverage() {
         return average;
