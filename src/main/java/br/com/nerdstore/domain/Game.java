@@ -6,6 +6,16 @@ public class Game {
     private double price;
     private double[] reviews;
     private double average;
+    private int[] barCode;
+
+    {
+        this.barCode = new int[5];
+        for (int i = 0; i < barCode.length; i++) {
+            this.barCode[i] = i + 1;
+        }
+
+        System.out.println("Log: Novo objeto Game está sendo alocado na memória...");
+    }
 
     public Game() {
     }
@@ -18,6 +28,7 @@ public class Game {
         this.name = name;
         this.genre = genre;
         this.setPrice(price);
+        System.out.println("Log: Construtor invocado.");
     }
 
     public void printInfo() {
@@ -87,5 +98,9 @@ public class Game {
 
     public double getAverage() {
         return average;
+    }
+
+    public int[] getBarCode() {
+        return barCode;
     }
 }
