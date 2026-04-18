@@ -7,6 +7,7 @@ public class Game {
     private double[] reviews;
     private double average;
     private int[] barCode;
+    private Studio studio;
 
     {
         this.barCode = new int[5];
@@ -32,7 +33,15 @@ public class Game {
     }
 
     public void printInfo() {
-        System.out.printf("Jogo: %s | Gênero: %s | Preço: R$ %.2f%n", this.name, this.genre, this.price);
+        System.out.println("######################################################################");
+        System.out.printf("Jogo: %s%nGênero: %s%n", this.name, this.genre);
+        if (this.studio != null) {
+            System.out.printf("Desenvolvedora: %s%n", this.studio.getName());
+        } else {
+            System.out.println("Desenvolvedora: Desconhecida");
+        }
+        System.out.printf("Preço: R$ %.2f%n", this.price);
+        System.out.println("######################################################################");
     }
 
     public void printMediaReviews() {
@@ -102,5 +111,13 @@ public class Game {
 
     public int[] getBarCode() {
         return barCode;
+    }
+
+    public Studio getStudio() {
+        return studio;
+    }
+
+    public void setStudio(Studio studio) {
+        this.studio = studio;
     }
 }
